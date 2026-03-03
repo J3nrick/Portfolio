@@ -28,8 +28,8 @@ const Projects = () => {
     },
     {
       title: "OtoGuide",
-      description: "Automotive guide platform providing comprehensive information and resources for vehicle maintenance and care.",
-      technologies: ["Flutter", "Dart", "Mobile App"],
+      description: "Automotive guide website providing comprehensive information and resources for vehicle maintenance and care.",
+      technologies: ["React", "Web Development", "Responsive Design"],
       github: null,
       live: null,
       color: "#f59e0b",
