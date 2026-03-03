@@ -44,55 +44,87 @@ const About = () => {
 
         <motion.div variants={itemVariants} className="about-text">
           <p>
-            I am a Web Developer and Application Developer specialized in delivering comprehensive mobile 
-            and web solutions using Flutter, React Native, Node.js, Kotlin, and TypeScript. My expertise lies in 
-            architecting secure, scalable multi-role systems and engineering transactional solutions with seamless API integrations.
+            I'm a Web Developer and Application Developer focused on building mobile and web solutions 
+            with Flutter, React Native, Node.js, and TypeScript. My work involves creating secure, 
+            scalable systems with multi-role access and smooth API integrations.
           </p>
           <p>
-            Beyond the code, I actively leverage AI to fuel my continuous learning. When I'm not building apps, I'm 
-            usually behind an espresso machine, exploring the art of coffee brewing.
+            I've developed transactional applications handling real-time data sync and built systems 
+            that prioritize both performance and user experience. When I'm not coding, you'll find me 
+            experimenting with AI tools or making espresso.
           </p>
         </motion.div>
 
-        <motion.div variants={itemVariants} className="skills-container">
-          <motion.div 
-            className="skill-category"
-            whileHover={{ scale: 1.05 }}
-          >
-            <h3>Mobile Development</h3>
-            <ul>
-              <li>Flutter / Dart</li>
-              <li>React Native</li>
-              <li>Kotlin</li>
-              <li>Java</li>
-            </ul>
-          </motion.div>
+        <motion.div variants={itemVariants} className="tech-stack-section">
+          <h2 className="stack-title">STACK</h2>
+          
+          <div className="stack-categories">
+            <div className="stack-category">
+              <h3 className="category-label">INFRASTRUCTURE</h3>
+              <div className="tech-badges">
+                <span className="tech-badge">Linux</span>
+                <span className="tech-badge">Docker</span>
+                <span className="tech-badge">Cisco</span>
+                <span className="tech-badge">CLI</span>
+              </div>
+            </div>
 
-          <motion.div 
-            className="skill-category"
-            whileHover={{ scale: 1.05 }}
-          >
-            <h3>Web Development</h3>
-            <ul>
-              <li>React / Next.js</li>
-              <li>TypeScript / JavaScript</li>
-              <li>Node.js / Express</li>
-              <li>HTML5 / CSS3 / Tailwind</li>
-            </ul>
-          </motion.div>
+            <div className="stack-category">
+              <h3 className="category-label">PROGRAMMING</h3>
+              <div className="tech-badges">
+                <span className="tech-badge">SQL</span>
+                <span className="tech-badge">Python</span>
+                <span className="tech-badge">Git</span>
+                <span className="tech-badge">Java</span>
+              </div>
+            </div>
 
-          <motion.div 
-            className="skill-category"
-            whileHover={{ scale: 1.05 }}
-          >
-            <h3>AI & Backend</h3>
-            <ul>
-              <li>OpenAI API</li>
-              <li>MongoDB / PostgreSQL</li>
-              <li>Firebase / Supabase</li>
-              <li>RESTful APIs</li>
-            </ul>
-          </motion.div>
+            <div className="stack-category">
+              <h3 className="category-label">DESIGN & IOT</h3>
+              <div className="tech-badges">
+                <span className="tech-badge">HTML</span>
+                <span className="tech-badge">CSS</span>
+                <span className="tech-badge">IoT Integration</span>
+              </div>
+            </div>
+          </div>
+
+          <div className="stack-categories">
+            <div className="stack-category">
+              <h3 className="category-label">MOBILE DEVELOPMENT</h3>
+              <div className="tech-badges">
+                <span className="tech-badge">Flutter</span>
+                <span className="tech-badge">Dart</span>
+                <span className="tech-badge">React Native</span>
+                <span className="tech-badge">Kotlin</span>
+              </div>
+            </div>
+
+            <div className="stack-category">
+              <h3 className="category-label">WEB DEVELOPMENT</h3>
+              <div className="tech-badges">
+                <span className="tech-badge">React</span>
+                <span className="tech-badge">Next.js</span>
+                <span className="tech-badge">TypeScript</span>
+                <span className="tech-badge">JavaScript</span>
+                <span className="tech-badge">Node.js</span>
+                <span className="tech-badge">Express</span>
+                <span className="tech-badge">Tailwind CSS</span>
+              </div>
+            </div>
+
+            <div className="stack-category">
+              <h3 className="category-label">AI & BACKEND</h3>
+              <div className="tech-badges">
+                <span className="tech-badge">OpenAI API</span>
+                <span className="tech-badge">MongoDB</span>
+                <span className="tech-badge">PostgreSQL</span>
+                <span className="tech-badge">Firebase</span>
+                <span className="tech-badge">Supabase</span>
+                <span className="tech-badge">RESTful APIs</span>
+              </div>
+            </div>
+          </div>
         </motion.div>
       </motion.div>
     </section>

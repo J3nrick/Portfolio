@@ -2,12 +2,15 @@ import { motion } from 'framer-motion';
 import Hero from './components/Hero';
 import About from './components/About';
 import Projects from './components/Projects';
+import Certifications from './components/Certifications';
 import Contact from './components/Contact';
+import ThemeToggle from './components/ThemeToggle';
 import './App.css';
 
 function App() {
   return (
     <div className="app">
+      <ThemeToggle />
       <motion.main
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -16,6 +19,7 @@ function App() {
         <Hero />
         <About />
         <Projects />
+        <Certifications />
         <Contact />
       </motion.main>
 
