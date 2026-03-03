@@ -44,18 +44,13 @@ const About = () => {
 
         <motion.div variants={itemVariants} className="about-text">
           <p>
-            I'm a passionate Web Developer with expertise in building modern web applications. 
-            I love creating elegant solutions to complex problems and continuously learning new technologies 
-            to stay at the forefront of web development.
+            I am a Web Developer and Application Developer specialized in delivering comprehensive mobile 
+            and web solutions using Flutter, React Native, Node.js, Kotlin, and TypeScript. My expertise lies in 
+            architecting secure, scalable multi-role systems and engineering transactional solutions with seamless API integrations.
           </p>
           <p>
-            With a strong foundation in both frontend and backend development, I specialize in creating 
-            seamless user experiences and robust server-side architectures. My approach combines clean code, 
-            best practices, and innovative thinking.
-          </p>
-          <p>
-            When I'm not coding, I enjoy exploring new technologies, contributing to open-source projects, 
-            and sharing knowledge with the developer community.
+            Beyond the code, I actively leverage AI to fuel my continuous learning. When I'm not building apps, I'm 
+            usually behind an espresso machine, exploring the art of coffee brewing.
           </p>
         </motion.div>
 
@@ -64,25 +59,25 @@ const About = () => {
             className="skill-category"
             whileHover={{ scale: 1.05 }}
           >
-            <h3>Frontend</h3>
+            <h3>Mobile Development</h3>
+            <ul>
+              <li>Flutter / Dart</li>
+              <li>React Native</li>
+              <li>Kotlin</li>
+              <li>Java</li>
+            </ul>
+          </motion.div>
+
+          <motion.div 
+            className="skill-category"
+            whileHover={{ scale: 1.05 }}
+          >
+            <h3>Web Development</h3>
             <ul>
               <li>React / Next.js</li>
               <li>TypeScript / JavaScript</li>
-              <li>HTML5 / CSS3</li>
-              <li>Tailwind CSS</li>
-            </ul>
-          </motion.div>
-
-          <motion.div 
-            className="skill-category"
-            whileHover={{ scale: 1.05 }}
-          >
-            <h3>Backend</h3>
-            <ul>
               <li>Node.js / Express</li>
-              <li>Python / Django</li>
-              <li>RESTful APIs</li>
-              <li>GraphQL</li>
+              <li>HTML5 / CSS3 / Tailwind</li>
             </ul>
           </motion.div>
 
@@ -90,12 +85,12 @@ const About = () => {
             className="skill-category"
             whileHover={{ scale: 1.05 }}
           >
-            <h3>Tools & Others</h3>
+            <h3>AI & Backend</h3>
             <ul>
-              <li>Git / GitHub</li>
-              <li>Docker</li>
+              <li>OpenAI API</li>
               <li>MongoDB / PostgreSQL</li>
-              <li>AWS / Cloud Services</li>
+              <li>Firebase / Supabase</li>
+              <li>RESTful APIs</li>
             </ul>
           </motion.div>
         </motion.div>

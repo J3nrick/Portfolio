@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { FaEnvelope, FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa';
+import { FaEnvelope, FaGithub, FaLinkedin, FaPhone } from 'react-icons/fa';
 
 const Contact = () => {
   const ref = useRef(null);
@@ -12,48 +12,40 @@ const Contact = () => {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2
+        staggerChildren: 0.15
       }
     }
   };
 
   const itemVariants = {
-    hidden: { scale: 0, opacity: 0 },
+    hidden: { y: 20, opacity: 0 },
     visible: {
-      scale: 1,
+      y: 0,
       opacity: 1,
       transition: {
-        type: "spring",
-        stiffness: 200,
-        damping: 15
+        duration: 0.5
       }
     }
   };
 
-  const socialLinks = [
+  const contactMethods = [
     {
       name: "Email",
+      value: "jenerick.101@gmail.com",
       icon: <FaEnvelope />,
-      link: "mailto:jenerick.101@gmail.com",
-      color: "#ea4335"
+      link: "mailto:jenerick.101@gmail.com"
     },
     {
       name: "GitHub",
+      value: "github.com/J3nrick",
       icon: <FaGithub />,
-      link: "https://github.com/J3nrick",
-      color: "#ffffff"
+      link: "https://github.com/J3nrick"
     },
     {
       name: "LinkedIn",
+      value: "linkedin.com/in/jenrick-ambalong",
       icon: <FaLinkedin />,
-      link: "https://www.linkedin.com/in/jenrick-ambalong/",
-      color: "#0077b5"
-    },
-    {
-      name: "Instagram",
-      icon: <FaInstagram />,
-      link: "https://www.instagram.com/jcolacea/",
-      color: "#e4405f"
+      link: "https://www.linkedin.com/in/jenrick-ambalong/"
     }
   ];
 
@@ -68,11 +60,11 @@ const Contact = () => {
       >
         <motion.h2 
           className="section-title"
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={isInView ? { opacity: 1, scale: 1 } : {}}
-          transition={{ duration: 0.6 }}
+          initial={{ opacity: 0, y: -30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.5 }}
         >
-          Get In Touch
+          CONTACT
         </motion.h2>
 
         <motion.p 
@@ -80,51 +72,29 @@ const Contact = () => {
           variants={itemVariants}
         >
           I'm always open to new opportunities, collaborations, and interesting projects. 
-          Feel free to reach out!
+          Feel free to reach out through any of the following channels.
         </motion.p>
 
         <motion.div className="contact-links" variants={containerVariants}>
-          {socialLinks.map((social, index) => (
+          {contactMethods.map((method, index) => (
             <motion.a
               key={index}
-              href={social.link}
-              target={social.link.startsWith('http') ? '_blank' : undefined}
-              rel={social.link.startsWith('http') ? 'noopener noreferrer' : undefined}
+              href={method.link}
+              target={method.link.startsWith('http') ? '_blank' : undefined}
+              rel={method.link.startsWith('http') ? 'noopener noreferrer' : undefined}
               className="contact-link"
               variants={itemVariants}
-              whileHover={{ 
-                scale: 1.15, 
-                rotate: [0, -10, 10, -10, 0],
-                boxShadow: `0 10px 30px ${social.color}60`
-              }}
-              whileTap={{ scale: 0.9 }}
-              transition={{ type: "spring", stiffness: 300 }}
+              whileHover={{ x: 5 }}
             >
-              <motion.div 
-                className="contact-icon"
-                animate={{
-                  y: [0, -5, 0],
-                }}
-                transition={{
-                  duration: 2,
-                  repeat: Infinity,
-                  delay: index * 0.2
-                }}
-              >
-                {social.icon}
-              </motion.div>
-              <span>{social.name}</span>
+              <div className="contact-icon">{method.icon}</div>
+              <div>
+                <div style={{ fontSize: '0.75rem', color: 'var(--text-secondary)', marginBottom: '0.25rem' }}>
+                  {method.name}
+                </div>
+                <span>{method.value}</span>
+              </div>
             </motion.a>
           ))}
-        </motion.div>
-
-        <motion.div 
-          className="contact-email-box"
-          variants={itemVariants}
-          whileHover={{ scale: 1.05 }}
-        >
-          <FaEnvelope className="email-icon" />
-          <a href="mailto:jenerick.101@gmail.com">jenerick.101@gmail.com</a>
         </motion.div>
       </motion.div>
     </section>

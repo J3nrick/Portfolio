@@ -25,7 +25,7 @@ function App() {
           whileInView={{ opacity: 1 }}
           transition={{ duration: 1 }}
         >
-          © 2026 Jenrick Ambalong. Built with React & Framer Motion.
+          © 2026 Jenrick Ambalong. Web Developer | Application Developer.
         </motion.p>
       </footer>
     </div>

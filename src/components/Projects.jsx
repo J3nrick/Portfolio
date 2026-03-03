@@ -11,34 +11,29 @@ const Projects = () => {
     {
       title: "Hakbang Frontend",
       description: "A modern frontend application built with cutting-edge technologies. Features responsive design, smooth animations, and intuitive user interface.",
-      technologies: ["React", "TypeScript", "Tailwind CSS", "Framer Motion"],
+      technologies: ["Flutter", "Dart", "Mobile App"],
       github: "https://github.com/Shiroe28/Hakbang-Frontend.git",
       live: null,
-      color: "#6366f1"
+      color: "#6366f1",
+      image: "/Hakbang.png"
     },
     {
-      title: "TSA 5 - Grid and Flexbox",
-      description: "Technical Summative Assessment 5 demonstrating proficiency in CSS Grid and Flexbox layouts for responsive web design.",
-      technologies: ["HTML", "CSS", "Grid", "Flexbox"],
+      title: "Orase",
+      description: "Modern web application showcasing frontend development skills with interactive features and clean design implementation.",
+      technologies: ["React", "CSS", "JavaScript", "Responsive Design"],
       github: null,
-      live: "https://202312569.github.io/it0043tc01/ambalong_tsa5",
-      color: "#10b981"
+      live: null,
+      color: "#10b981",
+      image: "/Orase.png"
     },
     {
-      title: "TSA 6 - Homepage",
-      description: "Technical Summative Assessment 6 showcasing a complete homepage design with modern web technologies and responsive layouts.",
-      technologies: ["HTML", "CSS", "JavaScript", "Responsive Design"],
+      title: "OtoGuide",
+      description: "Automotive guide platform providing comprehensive information and resources for vehicle maintenance and care.",
+      technologies: ["Flutter", "Dart", "Mobile App"],
       github: null,
-      live: "https://202312569.github.io/it0043tc01/ambalong_tsa6.html",
-      color: "#f59e0b"
-    },
-    {
-      title: "TSA 4 - Pokemon Cards",
-      description: "Technical Summative Assessment 4 featuring interactive Pokemon cards with dynamic styling and engaging user interface.",
-      technologies: ["HTML", "CSS", "JavaScript"],
-      github: null,
-      live: "https://202312569.github.io/it0043tc01/ambalong_tsa4.html",
-      color: "#ec4899"
+      live: null,
+      color: "#f59e0b",
+      image: "/otoguideph (3).png"
     },
   ];
 
@@ -100,19 +95,11 @@ const Projects = () => {
                 className="project-card-header"
                 style={{ borderTopColor: project.color }}
               >
-                <motion.div
-                  className="project-icon"
-                  animate={{
-                    rotate: [0, 360],
-                  }}
-                  transition={{
-                    duration: 20,
-                    repeat: Infinity,
-                    ease: "linear"
-                  }}
-                >
-                  <div className="icon-circle" style={{ background: project.color }}></div>
-                </motion.div>
+                <img 
+                  src={project.image} 
+                  alt={project.title}
+                  className="project-image"
+                />
               </motion.div>
 
               <div className="project-card-body">

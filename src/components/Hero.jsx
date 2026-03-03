@@ -76,12 +76,12 @@ const Hero = () => {
           </motion.h1>
 
           <motion.div variants={itemVariants} className="hero-title-container">
-            <h2 className="hero-title">Web Developer</h2>
+            <h2 className="hero-title">Web Developer | Application Developer</h2>
           </motion.div>
 
           <motion.p variants={itemVariants} className="hero-description">
-            Passionate about building innovative web solutions with modern technologies.
-            Transforming ideas into elegant, functional applications.
+            Building innovative mobile and web solutions powered by AI. 
+            Crafting scalable applications with Flutter, React, and modern technologies.
           </motion.p>
 
           <motion.div variants={itemVariants} className="hero-social">
